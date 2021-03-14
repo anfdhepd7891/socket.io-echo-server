@@ -1,11 +1,15 @@
+---
 application:
-  name: socket-io-echo
-  project: socket-io-echo-server
-  cloud_region: aws/eu-west-3
-  publicly_accessible: true
+  name: "socket-io-echo-server"
+  project: "wefef"
+  organization: "QoveryCommunity"
+databases:
+- type: "REDIS"
+  name: "leaf"
+  version: "5"
 routers:
-- name: main
+- name: "main-socket-io-echo-server"
   routes:
-  - application_name: socket-io-echo
+  - application_name: "socket-io-echo-server"
     paths:
-    - /
+    - "/*"
